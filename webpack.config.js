@@ -5,8 +5,8 @@ module.exports = {
   // multiple entry points
   // format = [output path]: [input path]
   entry: {
-    "./Structural/DecoratorPattern/dist/bundle":
-      "./Structural/DecoratorPattern/src/index.ts",
+    "./Behavioral/StrategyPattern/dist/bundle":
+      "./Behavioral/StrategyPattern/src/index.ts",
   },
   mode: "development",
   devtool: "source-map",
