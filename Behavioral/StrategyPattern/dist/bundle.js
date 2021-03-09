@@ -1,25 +1,66 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./Behavioral/StrategyPattern/src/index.ts":
+/******/ 	"use strict";
+var __webpack_exports__ = {};
 /*!*************************************************!*\
   !*** ./Behavioral/StrategyPattern/src/index.ts ***!
   \*************************************************/
-/***/ (() => {
 
-throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\nError: \u001b[31merror while parsing tsconfig.json\u001b[39m\n    at Object.loader (/Users/flachen/Desktop/DESIGNPATTERNS/Typescript/node_modules/ts-loader/dist/index.js:18:18)");
+class FlyWithWings {
+    fly() {
+        console.log("I am flying with wings");
+    }
+}
+class Nofly {
+    fly() {
+        console.log("I can't fly");
+    }
+}
+class Quack {
+    quack() {
+        console.log("Quack!!");
+    }
+}
+class Squeak {
+    quack() {
+        console.log("Squeak!!");
+    }
+}
+class Duck {
+    get performFly() {
+        return this.flyBehavior.fly;
+    }
+    get performQuack() {
+        return this.quackBehavior.quack;
+    }
+    setFlyBehavior(fb) {
+        this.flyBehavior = fb;
+    }
+    setQuackBehavior(qb) {
+        this.quackBehavior = qb;
+    }
+}
+class MallardDuck extends Duck {
+    constructor() {
+        super(...arguments);
+        this.flyBehavior = new FlyWithWings();
+        this.quackBehavior = new Quack();
+    }
+    display() {
+        console.log("I am a Mallard duck");
+    }
+}
+const mallard = new MallardDuck();
+class MiniDuckSimulator {
+    static main() {
+        const mallard = new MallardDuck();
+        mallard.performQuack();
+        mallard.performFly();
+        mallard.performQuack();
+    }
+}
+const sim = MiniDuckSimulator.main();
+console.log(sim);
 
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./Behavioral/StrategyPattern/src/index.ts"]();
-/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map

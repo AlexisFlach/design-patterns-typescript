@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://typescript/./Creational/Factory/src/index.ts"],"names":[],"mappings":";;;;;;AAAa;AACb","file":"./Creational/Factory/dist/bundle.js","sourcesContent":["\"use strict\";\nconsole.log(\"hi\");\n"],"sourceRoot":""}

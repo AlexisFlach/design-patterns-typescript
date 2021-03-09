@@ -7,6 +7,10 @@ module.exports = {
   entry: {
     "./Behavioral/StrategyPattern/dist/bundle":
       "./Behavioral/StrategyPattern/src/index.ts",
+    "./Behavioral/Observer/dist/bundle": "./Behavioral/Observer/src/index.ts",
+    "./Behavioral/DecoratorPattern/dist/bundle":
+      "./Behavioral/DecoratorPattern/src/index.ts",
+    "./Creational/Factory/dist/bundle": "./Creational/Factory/src/index.ts",
   },
   mode: "development",
   devtool: "source-map",
